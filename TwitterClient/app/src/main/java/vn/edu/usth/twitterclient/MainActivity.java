@@ -38,16 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
 //        bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
 //        getSupportFragmentManager().beginTransaction().replace(R.id.container, new Timeline());
-        Drawable d = getResources().getDrawable(R.drawable.dislike);
-       final Drawable d1= getResources().getDrawable(R.drawable.like);
-       final ImageView img= findViewById(R.id.dislike1);
-        img.setImageDrawable(d);
-        img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                img.setImageDrawable(d1);
-            }
-        });
+
+
 
         PagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager());
         ViewPager pager = (ViewPager) findViewById(R.id.pager);
