@@ -141,8 +141,19 @@
                 android:layout_height="400px"
                 android:adjustViewBounds="true"
                 android:src="@drawable/top1hltv"/>
-
+            <ImageView
+                    android:id="@+id/dislike1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tweet2_img"/>
+            <TextView
+                android:id="@+id/likee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tweet2_img"
+                android:layout_toRightOf="@+id/dislike1"
+                android:layout_marginLeft="10dp"
+                android:text="0like"/>
         </RelativeLayout>
     </LinearLayout>
-
 </RelativeLayout>

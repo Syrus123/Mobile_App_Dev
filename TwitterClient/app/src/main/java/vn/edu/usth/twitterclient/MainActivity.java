@@ -1,5 +1,6 @@
 package vn.edu.usth.twitterclient;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,10 +9,14 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
@@ -33,7 +38,16 @@ public class MainActivity extends AppCompatActivity {
 
 //        bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
 //        getSupportFragmentManager().beginTransaction().replace(R.id.container, new Timeline());
-
+        Drawable d = getResources().getDrawable(R.drawable.dislike);
+       final Drawable d1= getResources().getDrawable(R.drawable.like);
+       final ImageView img= findViewById(R.id.dislike1);
+        img.setImageDrawable(d);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                img.setImageDrawable(d1);
+            }
+        });
 
         PagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager());
         ViewPager pager = (ViewPager) findViewById(R.id.pager);
@@ -41,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         PagerSlidingTabStrip tabStrip = findViewById(R.id.tab);
         tabStrip.setViewPager(pager);
+
     }
 
 //    private BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod = new

@@ -7,7 +7,8 @@
     tools:context=".Timeline"
     android:paddingTop="10dp"
     android:paddingLeft="10dp"
-    android:paddingRight="10dp">
+    android:paddingRight="10dp"
+    android:background="@color/mainBackground">
 
         <LinearLayout
             android:id="@+id/tweet1"
@@ -141,6 +142,7 @@
                     android:layout_height="400px"
                     android:adjustViewBounds="true"
                     android:src="@drawable/top1hltv"/>
+
 
             </RelativeLayout>
         </LinearLayout>
